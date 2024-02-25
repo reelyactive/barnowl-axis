@@ -81,7 +81,7 @@ Supported AXIS Object Analytics scenarios
 The following AXIS Object Analytics scenarios are supported:
 
 | Scenario           | Decoded property  | Required scenario name |
-|:-------------------|:-------------------------------------------|
+|:-------------------|:------------------|:-----------------------|
 | Object in area     | isMotionDetected  | n/a                    |
 | Line crossing      | isMotionDetected  | n/a                    |
 | Time in area       | isMotionDetected  | n/a                    |
