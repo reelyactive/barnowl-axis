@@ -3,6 +3,8 @@ barnowl-axis
 
 __barnowl-axis__ converts [AXIS Object Analytics](https://www.axis.com/products/axis-object-analytics) messages from network cameras into standard developer-friendly JSON that is vendor/technology/application-agnostic.
 
+![Overview of barnowl-axis](https://reelyactive.github.io/barnowl-axis/images/overview.png)
+
 __barnowl-axis__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnowl-axis) that can run on resource-constrained edge devices as well as on powerful cloud servers and anything in between.  It is included in reelyActive's [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source middleware suite, and can just as easily be run standalone behind a [barnowl](https://github.com/reelyactive/barnowl) instance, as detailed in the code examples below.
 
 
@@ -88,7 +90,11 @@ The following AXIS Object Analytics scenarios are supported:
 
 See the [advlib Standard Properties](https://github.com/reelyactive/advlib/#standard-properties) for details of each decoded property.
 
+![AXIS Object Analytics scenarios](https://reelyactive.github.io/barnowl-axis/images/object-analytics-scenarios.png)
+
 Note that the Crossline counting scenario must be named _Crossline_ and the Occupancy in area scenario named _Occupancy_ in order for the corresponding messages to be decoded into `passageCounts` and `numberOfOccupants` properties, respectively.  The AXIS Object Analytics MQTT messages do not include a property to distinguish scenario type, and hence the user-defined name (included in the message as "scenario" property) is observed by __barnowl-axis__ to make this distinction.
+
+![Named AXIS Object Analytics scenarios](https://reelyactive.github.io/barnowl-axis/images/named-scenarios.png)
 
 The other scenarios require no naming constraints.  The messages for the other scenarios simply include an "active" property which is interpreted by __barnowl-axis__ as `isMotionDetected`.  It is therefore possible for two such scenarios to simultaneously produce contradictory `isMotionDetected` outputs.
 
