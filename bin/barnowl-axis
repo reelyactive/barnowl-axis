@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+const BarnowlAxis = require('../lib/barnowlaxis.js');
+
+let barnowl = new BarnowlAxis();
+
+barnowl.addListener(BarnowlAxis.MqttListener, {});
+
+barnowl.on('infrastructureMessage', (message) => {
+  console.log(message);
+});

@@ -1,0 +1,40 @@
+{
+  "name": "barnowl-axis",
+  "homepage": "https://github.com/reelyactive/barnowl-axis/",
+  "author": {
+    "name": "reelyActive",
+    "email": "info@reelyactive.com"
+  },
+  "description": "Collect anonymous occupancy and passage data from Axis Communications network cameras.  We believe in an open Internet of Things.",
+  "keywords": [
+    "reelyActive",
+    "barnowl",
+    "Axis Communications",
+    "infrastructureMessage"
+  ],
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "main": "./lib/barnowlaxis.js",
+  "scripts": {
+    "start": "node bin/barnowl-axis"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reelyactive/barnowl-axis.git"
+  },
+  "dependencies": {
+    "mqtt": "^5.3.5"
+  },
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/reelyactive/barnowl-axis/issues"
+  },
+  "contributors": [
+    {
+      "name": "Jeffrey Dungen"
+    }
+  ],
+  "license": "MIT"
+}
